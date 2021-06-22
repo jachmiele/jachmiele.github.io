@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>MIDI Casio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo"><strong>Jakub</strong> <span>Chmielewski</span></a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">My projects</a></li>
+				<li><a href="https://www.linkedin.com/in/jakub-chmielewski-a1aba720b">LinkedIn Profile</a></li>
+				<li><a href="https://github.com/jachmiele">GitHub Profile</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1>MIDI Casio Keyboard</h1>
+					</header>
+					<span class="image main"><img src="images/Keyboard/keyboard_beta.jpg" alt="" /></span>
+					<p>The goal of this project was to convert an old Casio keyboard into a MIDI controller. This gave a second life to a 20 years old device. Thanks to the implementation of the midi usb interface, it is possible to connect the device to a computer. This allows you to access an unlimited number of sounds and the ability to learn to play through programs such as Synthesia.</p>
+					<hr>
+					<div class="row">
+						<div class="col-7 col-12-small">
+							<h3>Elements</h3>
+							<p>The device has only three components: Arduino Nano, two 8-bit shift registers, six pull-down resistors.
+							The original circuit board was replaced with a specially designed PCB. There are additional leads on the board to allow transfer to a keyboard with more keys and to further develop the project by accessing all MCU pins. In addition, holes in the PCB to secure the board to the keyboad case are included.</p>
+							<h3>Keyboard matrix</h3>
+							<p>Most keys are connected in a matrix to reduce the number of cables. I checked all keys with multimeter and I found out that my keyboard has 6x9 matrix. The Arduino Nano doesn't have as many digital pins, so 6 row pins are connected directly to the Arduino and 9 column pins are connected to the shift registers.</p>
+						</div>
+						<div class="col-5 col-12-small">
+							<span class="image fit"><img src="images/Keyboard/keyboard_board.jpg" alt="" /></span>
+						</div>
+						<div class="col-3 col-6-small">
+							<span class="image fit"><img src="images/Keyboard/keyboard_beta_2.jpg" alt="" /></span>
+						</div>
+						<div class="col-9 col-12-small">
+							<h3>Code</h3>
+							<p>The code has a standard Arduino language structure. To enable MIDI communication via USB port built in Arduino, MIDI.h library is used. In the setup, the 3 pins connected to the shift register and the 6 keyboard outputs are defined. After that, a map of keys and corresponding tones is created. Then, in Loop the program continually scans all the keys by setting a high state to the next of the register outputs and checking the 6 keyboard outputs. The code doesn't use software debouncing because the keyboard has built-in capacitors to prevent it.<br>
+							For full keyboard support on Windows or Linux <a href="https://projectgus.github.io/hairless-midiserial/">the Hairless MIDI to Serial Bridge</a> program is needed.</p>
+						</div>
+					</div>
+					<a href="https://github.com/jachmiele/MIDI_Casio_Keyboard" class="button fit">See GitHub page</a>
+				</div>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled</li>
+					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

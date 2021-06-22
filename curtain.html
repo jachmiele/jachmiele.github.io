@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Smart Curtain</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo"><strong>Jakub</strong> <span>Chmielewski</span></a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">My projects</a></li>
+				<li><a href="https://www.linkedin.com/in/jakub-chmielewski-a1aba720b">LinkedIn Profile</a></li>
+				<li><a href="https://github.com/jachmiele">GitHub Profile</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1>Smart curtain with Blynk</h1>
+					</header>
+					<span class="image main"><img src="images/curtain.jpg" alt="" /></span>
+					<p>The purpose of this project was to automate the curtain on my window. When I go to sleep, I close the window so that the room is completely dark. But when the alarm clock rings, it's hard to get up without sunlight. Hence the idea that the curtain should automatically close when I sleep and open when I wake up. Additionally, I built the device in such a way that it will not open the curtain at the given time if it does not detect the sun, only after detecting the light the window will be opened. So if the opening is set for 6am, and the sunrise is at 7am, the curtain will open after 7am.</p>
+					<hr>
+					<div class="row">
+						<div class="col-8 col-12-small">
+							<h3>Elements</h3>
+							<p>To build the device I used a NodeMCU development board equipped with an ESP-12E Wi-Fi module which allows to connect to the Blinky server via a router connected to the WAN. Another important component is the 28BYJ-48 stepper motor, it moves the wire which allows for rolling up and down the window curtain. The signal controlling the motor is fed from four GPIO ports of the NodeMCU board to the driver based on the ULN2003 chip, which amplifies the signal fed to the stepper motor coils. Additionally, I attached a light sensor (photoresistor) to the ADC port of the 10-bit converter.</p>
+						</div>
+						<div class="col-4 col-12-small">
+							<span class="image fit"><img src="images/esp.png" alt="" /></span>
+						</div>
+						<div class="col-12-small">
+							<h3>Code</h3>
+							<p>I used Arduino IDE environment to program ESP8266. The program code was written in C++ language using Blynk libraries. This allowed me to use features such as: downloading real time from the server, automatic start at a specified time, controlling the device using a Android widget.</p>
+						</div>
+					</div>
+					<a href="https://github.com/jachmiele/Auto_Curtain" class="button fit">See GitHub page</a>
+				</div>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled</li>
+					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

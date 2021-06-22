@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>MultiEffect</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo"><strong>Jakub</strong> <span>Chmielewski</span></a>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<ul class="links">
+				<li><a href="index.html">My projects</a></li>
+				<li><a href="https://www.linkedin.com/in/jakub-chmielewski-a1aba720b">LinkedIn Profile</a></li>
+				<li><a href="https://github.com/jachmiele">GitHub Profile</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main" class="alt">
+
+			<!-- One -->
+			<section id="one">
+				<div class="inner">
+					<header class="major">
+						<h1>Guitar multieffect on Raspberry PI</h1>
+					</header>
+					<span class="image main"><img src="images/Multieffect/effect.jpg" alt="" /></span>
+					<p>A guitar multieffect is a device that allows you to change the sound of an electric guitar to one of the specific tones such as tremolo, overdrive, etc. This project was done in a team, and I was the team leader. It was a new experience for me and a good opportunity to learn about project management. <i>The project was done as part of the course "group projects" and received an honorable mention out of all the projects in the department.</i></p>
+					<hr>
+					<div class="row">
+						<div class="col-3 col-12-small">
+							<span class="image fit"><img src="images/Multieffect/all2.jpg" alt="" /></span>
+						</div>
+						<div class="col-8 col-12-small">
+							<h3>Elements</h3>
+							<p>The base of the device is Raspberry Pi 3b, but this is not enough for audio processing. The 3B model has a very basic sound card, so we used <a href="https://blokas.io/pisound/">the Pisound</a> from Blokas. This shield is specifically designed for guitar effects, with good quality audio pickups and extensive documentation. In addition, the manufacturer provides a free mobile application to control the device, which we also used.</p>
+							<h3>Code</h3>
+							<p>We used the open sourced <a href="https://puredata.info">Pure Data</a> environment to make the guitar effects. It is a graphical programming language which allows to create very advanced signal processing algorithms. We made three guitar effects and integrated them into the Pisund application via json files. This makes it possible to configure effects and customize the sound from a smartphone.</p>
+						</div>
+					</div>
+					<a href="https://projektgrupowy.eti.pg.gda.pl/editions/13/projects/3980" class="button fit">See Project page</a>
+				</div>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled</li>
+					<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
